@@ -37,3 +37,8 @@ export interface Color {
   name: String;
   value: String;
 }
+
+export interface Store{
+id:string
+  name:String;
+}

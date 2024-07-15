@@ -19,8 +19,7 @@ const MainNav:React.FC<MainNavProps> = ({data}) => {
         active: pathName===`/category/${route.id}`
     }))
 
-
-
+   
 
   return <div>
     {routes.map((route:any)=>(

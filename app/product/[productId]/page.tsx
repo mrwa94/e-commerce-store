@@ -5,6 +5,8 @@ import Info from "@/components/info";
 import ProductList from "@/components/product-list";
 import Container from "@/components/ui/container";
 
+
+export const revalidated = 0;
 interface ProductPageProps {
   params: {
     productId: string;
@@ -26,6 +28,7 @@ const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
             {/* Gallery */}
             <div>
                 <Gallery images={product.images}/>
+               <h1>Gallery there</h1>
             </div>
             <div className="mt-10 px-4 sm:mt-16 sm:px-0 lg:mt-0">
               {/* Product Info */}

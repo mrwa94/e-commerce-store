@@ -1,10 +1,9 @@
 "use client";
-import { TabGroup, TabList, TabPanel } from "@headlessui/react";
+import { TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import { Image as ImageType } from "@/type";
 import Image from "next/image";
 import GalleryTab from "./galleryTab";
 
-import { Fragment } from 'react'
 
 interface GalleryProps {
   images: ImageType[];
@@ -20,7 +19,7 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
           ))}
         </TabList>
       </div>
-      <TabPanel className="aspect-square w-full ">
+      <TabPanels className="aspect-square w-full ">
         {images.map((image) => (
           <TabPanel key={image.id}>
             <div className=" aspect-square relative h-full w-full sm:rounded-lg overflow-hidden">
@@ -33,7 +32,7 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
             </div>
           </TabPanel>
         ))}
-      </TabPanel>
+      </TabPanels>
     </TabGroup>
   );
 };
