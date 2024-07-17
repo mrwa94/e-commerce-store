@@ -59,7 +59,7 @@ const Summary = () => {
           <Currency value={totalPrice} />
         </div>
         <div className=" flex  justify-end items-center">
-          <Button onClick={onCheckout} className="bg-black text-white w-full ">
+          <Button disabled={items.length === 0} onClick={onCheckout} className="bg-black text-white w-full ">
             Checkout
           </Button>
         </div>
